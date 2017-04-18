@@ -1,0 +1,3 @@
+<nav class="nav-bar" ng-controller="NavCtrl as navbar">
+<button ng-repeat="link in navbar.navigation" ng-click="navbar.travel(link.url)" ng-disabled="" ng-class="{current: link.url == navbar.here}" >{{ link.params.linkName }}</button>
+</nav>

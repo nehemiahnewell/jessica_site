@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html ng-app="jessica_site">
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Jessica Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script src="/scripts/app.js"></script>
-</body>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Jessica Site</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/style.css">
+    </head>
+    <body class="HolyGrail">
+        <div class="HolyGrail-body">
+            <main class="HolyGrail-content">
+                <div class="header-block">
+                    <header>Jessica C Young</header>
+                    Insert skills here.
+                </div>
+                <ng-include src="'/templates/nav_bar.html'"></ng-include>
+                <ui-view></ui-view>
+                <footer>&#160;</footer>
+            </main>
+            <div class="HolyGrail-left">&#160;</div>
+            <div class="HolyGrail-right">&#160;</div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/services/Fixtures.js"></script>
+        <script src="/scripts/controllers/GalleriesCtrl.js"></script>
+        <script src="/scripts/controllers/NavCtrl.js"></script>
+        <script src="/scripts/controllers/PRCtrl.js"></script>
+    </body>
 </html>

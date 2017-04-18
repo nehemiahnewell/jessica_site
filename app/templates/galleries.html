@@ -1,0 +1,24 @@
+<div class="container" ng-show="galleries.currentGallery == false">
+        <figure class="frame" ng-repeat="(key, value) in galleries.galleries"><img src="{{ value.galleryArt }}" alt="{{ key }}" class="gallery" ng-click="galleries.setGallery(value, key)">
+            <figcaption class="caption"> {{ key }} </figcaption>
+        </figure>
+</div>
+<div class="container" ng-show="galleries.currentGallery && galleries.currentPicture == false">
+    <button class="back-button" ng-click="galleries.unsetGallery()">Back to Galleries</button>
+    <figure class="frame" ng-repeat="image in galleries.currentGallery.galleryMembers"><img src="{{ image.artURL }}" alt="{{ image.title }}" class="gallery" ng-click="galleries.setPicture(image)">
+        <figcaption class="caption"> {{ image.title }} </figcaption>
+    </figure>
+</div>
+<div class="large-display" ng-show="galleries.currentPicture">
+    <button class="back-button" ng-click="galleries.unsetPicture()">Back to {{ galleries.galleryName }}</button>
+    <img src="{{ galleries.currentPicture.artURL }}" alt="{{ image.title }}" class="displayed">
+    <article class="pushy">
+        <h4>{{ galleries.currentPicture.title }}</h4>
+        <p>{{ galleries.currentPicture.discription }}</p>
+        <p>{{ galleries.currentPicture.where }}</p>
+        <p>{{ galleries.currentPicture.size }}</p>
+        <p>{{ galleries.currentPicture.price }}</p>
+        <h4>Prints</h4>
+        <p>Legal Mombo Jumbo</p>
+    </article>
+</div>
