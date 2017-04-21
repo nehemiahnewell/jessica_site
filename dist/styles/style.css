@@ -394,3 +394,21 @@ contact
     border-color: transparent;
     box-sizing: border-box;
 }
+
+input[type=text] {
+    width: 100%;
+    padding: .3em;
+    margin: 1em;
+    box-sizing: border-box;
+    border: 2px double #dfdfdf;
+    border-radius: .6em;
+}
+
+textarea {
+    width: 100%;
+    padding: .3em;
+    margin: 1em;
+    box-sizing: border-box;
+    border: 2px double #dfdfdf;
+    border-radius: .6em;
+}
