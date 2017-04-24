@@ -26,6 +26,6 @@ RED.init(server, {
 });
 
 app.use("/system/admin",RED.httpAdmin);
-app.use("/",RED.httpNode);
+app.use(function(req, res) {res.sendfile(__dirname + '/public/index.html');},RED.httpNode);
 server.listen(8080);
 RED.start();
