@@ -1,0 +1,11 @@
+branch-defaults:
+  uploadable:
+    environment: jessica-site-dev
+    group_suffix: null
+global:
+  application_name: jessica_site
+  default_ec2_keyname: jessica-keypair
+  default_platform: Node.js
+  default_region: us-west-1
+  profile: eb-cli
+  sc: git
