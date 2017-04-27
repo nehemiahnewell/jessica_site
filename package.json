@@ -2,7 +2,7 @@
   "name": "jessica_site",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npm start"
   },
   "author": "Nehemiah Evan Newell",
   "license": "ISC",
