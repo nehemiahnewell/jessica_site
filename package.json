@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "angular-recaptcha": "^4.0.4",
+    "googleapis": "^19.0.0",
     "hapi": "~7.5.0",
     "path": "^0.4.9"
   },
