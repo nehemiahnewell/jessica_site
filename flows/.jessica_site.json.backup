@@ -1,0 +1,163 @@
+[
+    {
+        "id": "86075447.485a78",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "12d8a948.d8a14f",
+        "type": "tab",
+        "label": "Flow 2"
+    },
+    {
+        "id": "f511f604.5d86c",
+        "type": "http in",
+        "z": "86075447.485a78",
+        "name": "",
+        "url": "/contact",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 79,
+        "y": 68,
+        "wires": [
+            [
+                "59c3b0e9.eff56",
+                "92795216.89c9e8"
+            ]
+        ]
+    },
+    {
+        "id": "59c3b0e9.eff56",
+        "type": "http response",
+        "z": "86075447.485a78",
+        "name": "",
+        "x": 491,
+        "y": 69,
+        "wires": []
+    },
+    {
+        "id": "5fe90747.8f1a4",
+        "type": "e-mail",
+        "z": "86075447.485a78",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "jessicaCYoung.Art@gmail.com",
+        "dname": "",
+        "x": 607,
+        "y": 125,
+        "wires": []
+    },
+    {
+        "id": "92795216.89c9e8",
+        "type": "template",
+        "z": "86075447.485a78",
+        "name": "",
+        "field": "text",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "From: {{payload.name}}\n<br />\nAddress: {{payload.mail}} \n<br />\n<h1>Message</h1>\n{{payload.comment}}",
+        "x": 75,
+        "y": 118,
+        "wires": [
+            [
+                "90d5d874.81f378"
+            ]
+        ]
+    },
+    {
+        "id": "90d5d874.81f378",
+        "type": "template",
+        "z": "86075447.485a78",
+        "name": "",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.name}}",
+        "x": 211,
+        "y": 121,
+        "wires": [
+            [
+                "815cb1f.98249d"
+            ]
+        ]
+    },
+    {
+        "id": "815cb1f.98249d",
+        "type": "change",
+        "z": "86075447.485a78",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "text",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 373,
+        "y": 123,
+        "wires": [
+            [
+                "5fe90747.8f1a4"
+            ]
+        ]
+    },
+    {
+        "id": "b2dadd93.f7c47",
+        "type": "http in",
+        "z": "12d8a948.d8a14f",
+        "name": "",
+        "url": "/publications.json",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 123.5,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f4aad2a.11693",
+        "type": "http response",
+        "z": "12d8a948.d8a14f",
+        "name": "",
+        "x": 898.5,
+        "y": 42,
+        "wires": []
+    },
+    {
+        "id": "3583a889.2aa838",
+        "type": "debug",
+        "z": "12d8a948.d8a14f",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "payload",
+        "x": 867.5,
+        "y": 117.19999694824219,
+        "wires": []
+    },
+    {
+        "id": "a9f99f17.fdcbc",
+        "type": "mongodb in",
+        "z": "12d8a948.d8a14f",
+        "mongodb": "",
+        "name": "",
+        "collection": "",
+        "operation": "find",
+        "x": 473.5,
+        "y": 48.80000305175781,
+        "wires": [
+            []
+        ]
+    }
+]

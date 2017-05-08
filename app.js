@@ -1,7 +1,8 @@
 var http = require('http'),
     express = require('express'),
     app = express(),
-    RED = require("node-red");
+    RED = require("node-red"),
+    path = require("path");
 
 var server = http.createServer(app);
 app.use('/', express.static('public'));
@@ -25,6 +26,7 @@ RED.init(server, {
     httpStatic: __dirname + "/public",
     flowFile: 'jessica_site.json',
     flowFilePretty: true,
+    userDir: path.join(__dirname, "flows"),
 });
 
 app.use("/system/admin",RED.httpAdmin);

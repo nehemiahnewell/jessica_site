@@ -15,7 +15,8 @@
   "dependencies": {
     "angular-recaptcha": "^4.0.4",
     "express": "^4.15.2",
-    "node-red": "^0.16.2"
+    "node-red": "^0.16.2",
+    "node-red-node-mongodb": "0.0.13"
   },
   "devDependencies": {
     "connect-modrewrite": "^0.7.9",
