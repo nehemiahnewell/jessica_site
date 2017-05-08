@@ -1,11 +1,11 @@
 <div class="pushy">
     <h2 class="pr-header">Selected art exhibitions</h2>
-    <div class="pr-entry" ng-repeat="exhibit in pr.exhibitions">
+    <div class="pr-entry" ng-repeat="exhibit in exhibitions">
         <p class="full-text">{{ exhibit.exhibition }} {{ exhibit.year }}</p>
         <p class="full-text-link" ng-if="exhibit.site">{{ exhibit.site }}</p>
     </div>
     <h2 class="pr-header">Publications</h2>
-    <div class="pr-entry"ng-repeat="publish in pr.publications">
+    <div class="pr-entry"ng-repeat="publish in publications">
         <p class="full-text">{{ publish.publication }} {{ publish.date }}</p>
         <p class="full-text-link" ng-if="publish.site">{{ publish.site }}</p>
     </div>

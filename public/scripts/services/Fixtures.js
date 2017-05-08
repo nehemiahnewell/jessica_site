@@ -1,6 +1,6 @@
 /*global angular*/
 (function() {
-  function Fixtures() {
+  function Fixtures($http, $q) {
     var Fixtures = {};
     var nature = {
       galleryArt: 'assets/images/FallLeaf.jpg',
@@ -118,6 +118,18 @@
         site: "http://annkullberg.com/collections/books-more/products/cp-hidden-treasures-volume-iii"
       },
     ];
+    Fixtures.getPublications = function()
+    {  
+      var publication_defered = $q.defer();
+      $http.get('/publications.json')
+        .then(
+          function successCallback(response) {
+            publication_defered.resolve(response.data);
+          }, function errorCallback(response) {
+            publication_defered.reject(publications);
+      });
+      return publication_defered.promise;
+    };
     var exhibitions = 
     [
       {
@@ -157,5 +169,5 @@
  
 angular
   .module('jessica_site')
-  .factory('Fixtures', Fixtures);
+  .factory('Fixtures', ['$http', '$q',Fixtures]);
 })();

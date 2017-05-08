@@ -1,11 +1,11 @@
 <div class="container" ng-show="galleries.currentGallery == false">
-        <figure class="frame" ng-repeat="(key, value) in galleries.galleries"><img src="{{ value.galleryArt }}" alt="{{ key }}" class="gallery" ng-click="galleries.setGallery(value, key)">
+        <figure class="frame" ng-repeat="(key, value) in galleries.galleries" ng-click="galleries.setGallery(value, key)"><img src="{{ value.galleryArt }}" alt="{{ key }}" class="gallery" ng-click="galleries.setGallery(value, key)">
             <figcaption class="caption"> {{ key }} </figcaption>
         </figure>
 </div>
 <div class="container" ng-show="galleries.currentGallery && galleries.currentPicture == false">
     <button class="back-button" ng-click="galleries.unsetGallery()">Back to Galleries</button>
-    <figure class="frame" ng-repeat="image in galleries.currentGallery.galleryMembers"><img src="{{ image.artURL }}" alt="{{ image.title }}" class="gallery" ng-click="galleries.setPicture(image)">
+    <figure class="frame" ng-repeat="image in galleries.currentGallery.galleryMembers" ng-click="galleries.setPicture(image)"><img src="{{ image.artURL }}" alt="{{ image.title }}" class="gallery">
         <figcaption class="caption"> {{ image.title }} </figcaption>
     </figure>
 </div>
