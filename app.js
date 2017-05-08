@@ -22,7 +22,9 @@ RED.init(server, {
     // When httpAdminRoot is used to move the UI to a different root path, the
     // following property can be used to identify a directory of static content
     // that should be served at http://localhost:1880/.
-    httpStatic: __dirname + "/public"
+    httpStatic: __dirname + "/public",
+    flowFile: 'jessica_site.json',
+    flowFilePretty: true,
 });
 
 app.use("/system/admin",RED.httpAdmin);
