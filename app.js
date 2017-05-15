@@ -32,9 +32,9 @@ RED.init(server, {
     // following property can be used to identify a directory of static content
     // that should be served at http://localhost:1880/.
     httpStatic: __dirname + "/public",
-    // flowFile: 'jessica_site.json',
-    // flowFilePretty: true,
-    // userDir: path.join(__dirname, "flows"),
+    flowFile: 'jessica_site.json',
+    flowFilePretty: true,
+    userDir: path.join(__dirname, "flows"),
 });
 
 app.use("/system/admin",RED.httpAdmin);

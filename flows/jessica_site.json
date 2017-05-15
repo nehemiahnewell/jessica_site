@@ -1,11 +1,11 @@
 [
     {
-        "id": "86075447.485a78",
+        "id": "850ac38.75d3bc",
         "type": "tab",
         "label": "Flow 1"
     },
     {
-        "id": "12d8a948.d8a14f",
+        "id": "e2989a87.b185e8",
         "type": "tab",
         "label": "Flow 2"
     },
@@ -19,9 +19,18 @@
         "name": ""
     },
     {
-        "id": "f511f604.5d86c",
+        "id": "f46959a0.7faa7",
+        "type": "mongodb",
+        "z": "",
+        "hostname": "ds121171.mlab.com",
+        "port": "21171",
+        "db": "jessica_site",
+        "name": ""
+    },
+    {
+        "id": "cf3370af.9a15c8",
         "type": "http in",
-        "z": "86075447.485a78",
+        "z": "850ac38.75d3bc",
         "name": "",
         "url": "/contact",
         "method": "post",
@@ -30,24 +39,25 @@
         "y": 68,
         "wires": [
             [
-                "59c3b0e9.eff56",
-                "92795216.89c9e8"
+                "28789dbe.0d632a",
+                "6b028008.58c01",
+                "90bf8f01.40418"
             ]
         ]
     },
     {
-        "id": "59c3b0e9.eff56",
+        "id": "28789dbe.0d632a",
         "type": "http response",
-        "z": "86075447.485a78",
+        "z": "850ac38.75d3bc",
         "name": "",
         "x": 491,
         "y": 69,
         "wires": []
     },
     {
-        "id": "5fe90747.8f1a4",
+        "id": "b11f32ca.c2d478",
         "type": "e-mail",
-        "z": "86075447.485a78",
+        "z": "850ac38.75d3bc",
         "server": "smtp.gmail.com",
         "port": "465",
         "secure": true,
@@ -58,27 +68,27 @@
         "wires": []
     },
     {
-        "id": "92795216.89c9e8",
+        "id": "6b028008.58c01",
         "type": "template",
-        "z": "86075447.485a78",
+        "z": "850ac38.75d3bc",
         "name": "",
         "field": "text",
         "fieldType": "msg",
         "format": "html",
         "syntax": "mustache",
         "template": "From: {{payload.name}}\n<br />\nAddress: {{payload.mail}} \n<br />\n<h1>Message</h1>\n{{payload.comment}}",
-        "x": 75,
-        "y": 118,
+        "x": 65,
+        "y": 120,
         "wires": [
             [
-                "90d5d874.81f378"
+                "201b8dc4.ce148a"
             ]
         ]
     },
     {
-        "id": "90d5d874.81f378",
+        "id": "201b8dc4.ce148a",
         "type": "template",
-        "z": "86075447.485a78",
+        "z": "850ac38.75d3bc",
         "name": "",
         "field": "topic",
         "fieldType": "msg",
@@ -89,14 +99,14 @@
         "y": 121,
         "wires": [
             [
-                "815cb1f.98249d"
+                "b25c30a3.21518"
             ]
         ]
     },
     {
-        "id": "815cb1f.98249d",
+        "id": "b25c30a3.21518",
         "type": "change",
-        "z": "86075447.485a78",
+        "z": "850ac38.75d3bc",
         "name": "",
         "rules": [
             {
@@ -116,61 +126,281 @@
         "y": 123,
         "wires": [
             [
-                "5fe90747.8f1a4"
+                "b11f32ca.c2d478"
             ]
         ]
     },
     {
-        "id": "b2dadd93.f7c47",
+        "id": "32bac18c.445946",
         "type": "http in",
-        "z": "12d8a948.d8a14f",
+        "z": "e2989a87.b185e8",
         "name": "",
         "url": "/publications.json",
         "method": "get",
         "swaggerDoc": "",
-        "x": 123.5,
-        "y": 40,
+        "x": 122.5,
+        "y": 262.00001525878906,
         "wires": [
             [
-                "39538d73.e68032"
+                "1e2a6205.c96b4e"
             ]
         ]
     },
     {
-        "id": "8f4aad2a.11693",
-        "type": "http response",
-        "z": "12d8a948.d8a14f",
+        "id": "90bf8f01.40418",
+        "type": "debug",
+        "z": "850ac38.75d3bc",
         "name": "",
-        "x": 898.5,
-        "y": 42,
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 223.49998474121094,
+        "y": 25.199996948242188,
         "wires": []
     },
     {
-        "id": "3583a889.2aa838",
-        "type": "debug",
-        "z": "12d8a948.d8a14f",
+        "id": "19e11fa5.d7655",
+        "type": "mongodb in",
+        "z": "e2989a87.b185e8",
+        "mongodb": "f46959a0.7faa7",
         "name": "",
-        "active": false,
+        "collection": "exhibitions",
+        "operation": "find",
+        "x": 478.20001220703125,
+        "y": 701.2000274658203,
+        "wires": [
+            [
+                "5140cc5e.b970a4",
+                "6a5c8bf6.6d6d34"
+            ]
+        ]
+    },
+    {
+        "id": "9dd2d96.26cb1a8",
+        "type": "http in",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "url": "/exhibitions.json",
+        "method": "get",
+        "swaggerDoc": "",
+        "x": 126,
+        "y": 696.2000274658203,
+        "wires": [
+            [
+                "a9465f0b.5197c8"
+            ]
+        ]
+    },
+    {
+        "id": "db44127.14d6f7",
+        "type": "http response",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "x": 765.2000732421875,
+        "y": 661.2000274658203,
+        "wires": []
+    },
+    {
+        "id": "5140cc5e.b970a4",
+        "type": "debug",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "active": true,
         "console": "true",
         "complete": "payload",
-        "x": 867.5,
-        "y": 117.19999694824219,
+        "x": 590.2000732421875,
+        "y": 756.4000091552734,
         "wires": []
     },
     {
-        "id": "39538d73.e68032",
+        "id": "d2e93a59.5fac4",
+        "type": "http response",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "x": 434,
+        "y": 882.0000152587891,
+        "wires": []
+    },
+    {
+        "id": "724bbc8d.68f3ec",
+        "type": "inject",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "86400",
+        "crontab": "",
+        "once": true,
+        "x": 370,
+        "y": 640.0000152587891,
+        "wires": [
+            [
+                "19e11fa5.d7655"
+            ]
+        ]
+    },
+    {
+        "id": "d54c50f7.feaa48",
+        "type": "debug",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 452,
+        "y": 817.0000152587891,
+        "wires": []
+    },
+    {
+        "id": "a9465f0b.5197c8",
+        "type": "function",
+        "z": "e2989a87.b185e8",
+        "name": "Get APOD from cache",
+        "func": "msg.payload = global.get('exhibitions');\nif(msg.payload == null)\n{\n    node.send([msg]);\n}\nelse \n{\n    node.send([null,msg]);\n}\n",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 156.5,
+        "y": 815.0000152587891,
+        "wires": [
+            [
+                "d54c50f7.feaa48",
+                "19e11fa5.d7655"
+            ],
+            [
+                "d2e93a59.5fac4",
+                "d54c50f7.feaa48"
+            ]
+        ]
+    },
+    {
+        "id": "6a5c8bf6.6d6d34",
+        "type": "function",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "func": "global.set(\"exhibitions\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 616,
+        "y": 659.0000152587891,
+        "wires": [
+            [
+                "db44127.14d6f7"
+            ]
+        ]
+    },
+    {
+        "id": "4a941bad.0e612c",
+        "type": "http response",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "x": 894.2000732421875,
+        "y": 173.1999969482422,
+        "wires": []
+    },
+    {
+        "id": "e4d31cb4.dfe44",
+        "type": "debug",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "active": true,
+        "console": "true",
+        "complete": "payload",
+        "x": 770.2000732421875,
+        "y": 304.4000244140625,
+        "wires": []
+    },
+    {
+        "id": "17d45aa.2140ea5",
+        "type": "http response",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "x": 482,
+        "y": 435,
+        "wires": []
+    },
+    {
+        "id": "c3ecf2e5.89ac38",
+        "type": "inject",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "86400",
+        "crontab": "",
+        "once": true,
+        "x": 380,
+        "y": 193,
+        "wires": [
+            [
+                "c2461f24.91c72"
+            ]
+        ]
+    },
+    {
+        "id": "75bc2288.a7baac",
+        "type": "debug",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 500,
+        "y": 370,
+        "wires": []
+    },
+    {
+        "id": "1e2a6205.c96b4e",
+        "type": "function",
+        "z": "e2989a87.b185e8",
+        "name": "Get APOD from cache",
+        "func": "msg.payload = global.get('publications');\nif(msg.payload == null)\n{\n    node.send([msg]);\n}\nelse \n{\n    node.send([null,msg]);\n}\n",
+        "outputs": "2",
+        "noerr": 0,
+        "x": 204.5,
+        "y": 368,
+        "wires": [
+            [
+                "75bc2288.a7baac",
+                "c2461f24.91c72"
+            ],
+            [
+                "17d45aa.2140ea5",
+                "75bc2288.a7baac"
+            ]
+        ]
+    },
+    {
+        "id": "e1ea00c2.6ca91",
+        "type": "function",
+        "z": "e2989a87.b185e8",
+        "name": "",
+        "func": "global.set(\"publications\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 762,
+        "y": 180.99998474121094,
+        "wires": [
+            [
+                "4a941bad.0e612c"
+            ]
+        ]
+    },
+    {
+        "id": "c2461f24.91c72",
         "type": "mongodb in",
-        "z": "12d8a948.d8a14f",
-        "mongodb": "bd241bdd.1a5a6",
+        "z": "e2989a87.b185e8",
+        "mongodb": "f46959a0.7faa7",
         "name": "",
         "collection": "publications",
         "operation": "find",
-        "x": 507.20001220703125,
-        "y": 41.19999694824219,
+        "x": 499.49993896484375,
+        "y": 249,
         "wires": [
             [
-                "8f4aad2a.11693",
-                "3583a889.2aa838"
+                "e4d31cb4.dfe44",
+                "e1ea00c2.6ca91"
             ]
         ]
     }

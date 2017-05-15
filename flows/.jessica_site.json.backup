@@ -10,6 +10,15 @@
         "label": "Flow 2"
     },
     {
+        "id": "bd241bdd.1a5a6",
+        "type": "mongodb",
+        "z": "",
+        "hostname": "ds121171.mlab.com",
+        "port": "21171",
+        "db": "jessica_site",
+        "name": ""
+    },
+    {
         "id": "f511f604.5d86c",
         "type": "http in",
         "z": "86075447.485a78",
@@ -122,7 +131,9 @@
         "x": 123.5,
         "y": 40,
         "wires": [
-            []
+            [
+                "39538d73.e68032"
+            ]
         ]
     },
     {
@@ -139,7 +150,7 @@
         "type": "debug",
         "z": "12d8a948.d8a14f",
         "name": "",
-        "active": true,
+        "active": false,
         "console": "true",
         "complete": "payload",
         "x": 867.5,
@@ -147,17 +158,20 @@
         "wires": []
     },
     {
-        "id": "a9f99f17.fdcbc",
+        "id": "39538d73.e68032",
         "type": "mongodb in",
         "z": "12d8a948.d8a14f",
-        "mongodb": "",
+        "mongodb": "bd241bdd.1a5a6",
         "name": "",
-        "collection": "",
+        "collection": "publications",
         "operation": "find",
-        "x": 473.5,
-        "y": 48.80000305175781,
+        "x": 507.20001220703125,
+        "y": 41.19999694824219,
         "wires": [
-            []
+            [
+                "8f4aad2a.11693",
+                "3583a889.2aa838"
+            ]
         ]
     }
 ]
