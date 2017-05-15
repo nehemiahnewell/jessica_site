@@ -393,7 +393,7 @@ contact
     box-sizing: border-box;
 }
 
-input[type=text] {
+input[type=text], input[type=email] {
     width: 100%;
     padding: .3em;
     margin: 1em;

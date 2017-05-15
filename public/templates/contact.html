@@ -8,22 +8,20 @@
     </div>
   </div>
   <div class="contact-width-fix">
-    <form action="/contact" method="post" class="contact-body">
+    <form ng-submit="sendOn()" class="contact-body" name="contactForm">
       <div class="contact-left">
         <div class="inner-contents">
           <p>Your Name:</p>
-          <input type="text" name="name"><br>
+          <input type="text" name="name" ng-model="submitForms.name" minlength=6 placeholder="Name" required><br>
           <p>Your E-mail:</p>
-          <input type="text" name="mail"><br>
-          <p>Retype E-mail:</p>
-          <input type="text"><br>
+          <input type="email" name="mail" ng-model="submitForms.mail" placeholder="Email" required><br>
         </div>
       </div>
       <div class="contact-right">
         <div class="inner-contents">
           <p>Your Message:</p>
-          <textarea name="comment" cols='50' rows='10'></textarea><br><br>
-          <input type="submit" value="Send">
+          <textarea name="comment" cols='50' rows='10' ng-model="submitForms.comment" minlength=20 required></textarea><br><br>
+          <input type="submit" value="Send" ng-disabled="contactForm.$error.pattern">
           <input type="reset" value="Reset">
         </div>
       </div>

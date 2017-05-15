@@ -100,6 +100,14 @@
       ]
     };
     Fixtures.galleries = {"Nature":nature,"Portraits":portraits,"Cityscapes":cityscapes};
+    
+    
+    
+    
+    
+    
+    
+    
     var publications = 
     [
       {
@@ -126,7 +134,7 @@
           function successCallback(response) {
             publication_defered.resolve(response.data);
           }, function errorCallback(response) {
-            publication_defered.reject(publications);
+            publication_defered.reject(null);
       });
       return publication_defered.promise;
     };
@@ -163,6 +171,18 @@
         site: "http://www.auscpa.org/colourbrations-2016.html"
       },
     ];
+    Fixtures.getExhibitions = function()
+    {  
+      var exhibitions_defered = $q.defer();
+      $http.get('/exhibitions.json')
+        .then(
+          function successCallback(response) {
+            exhibitions_defered.resolve(response.data);
+          }, function errorCallback(response) {
+            exhibitions_defered.reject(null);
+      });
+      return exhibitions_defered.promise;
+    };
     Fixtures.pr = {'Exhibitions':exhibitions, 'Publications':publications};
     return Fixtures;
 }

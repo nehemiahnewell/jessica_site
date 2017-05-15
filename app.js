@@ -9,6 +9,14 @@ app.use('/', express.static('public'));
 RED.init(server, {
     uiPort: 1880,
     httpAdminRoot: '/system/admin',
+    adminAuth: {
+           type: "credentials",
+           users: [{
+               username: "jessicaCYoung",
+               password: "$2a$08$aLKSODK0JVYDFwxe3EZ7d.5xHI4raQMx7SSWIYspzPVZx0kAiw9qO",
+               permissions: "*"
+           }]
+       },
 
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
@@ -24,9 +32,9 @@ RED.init(server, {
     // following property can be used to identify a directory of static content
     // that should be served at http://localhost:1880/.
     httpStatic: __dirname + "/public",
-    flowFile: 'jessica_site.json',
-    flowFilePretty: true,
-    userDir: path.join(__dirname, "flows"),
+    // flowFile: 'jessica_site.json',
+    // flowFilePretty: true,
+    // userDir: path.join(__dirname, "flows"),
 });
 
 app.use("/system/admin",RED.httpAdmin);

@@ -35,6 +35,7 @@
             params: {
                 linkName: "Contact",
             },
+            controller: "ContactCtrl as contact",
             templateUrl: '/templates/contact.html'
         });
     }

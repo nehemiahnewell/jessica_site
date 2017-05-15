@@ -2,10 +2,7 @@
 (function() {
   function PRCtrl(Fixtures, $scope, $q)
   {
-    console.log("promise kept", Fixtures.getPublications());
-    $scope.exhibitions = Fixtures.pr['Exhibitions'];
-    // $scope.publications = Fixtures.pr['Publications'];
-    $scope.publications = Fixtures.getPublications();
+    Fixtures.getExhibitions().then(function(exhibited) {$scope.exhibitions = exhibited;}, function(exhibited) { $scope.publications = Fixtures.pr['Exhibitions'] });
     Fixtures.getPublications().then(function(published) {$scope.publications = published;}, function(published) { $scope.publications = Fixtures.pr['Publications'] });
   }
   angular
