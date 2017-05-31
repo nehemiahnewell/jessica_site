@@ -10,8 +10,15 @@
 	this.travel = function(link)
 	{
 	    $location.path(link);
-	    this.here = $location.path();
-	    console.log(this.here);
+	    console.log(this.here, $location.path());
+	    if(this.here === $location.path() && this.here == "/")
+	    {
+	      $state.go($state.current, {}, {reload: true});
+	    }
+	    else
+	    {
+	      this.here = $location.path();
+	    }
 	};
 	$rootScope.$on('$routeChangeSuccess', function(e, curr, prev) {
        this.here = $location.path();

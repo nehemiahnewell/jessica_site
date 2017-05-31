@@ -115,6 +115,11 @@ header
 Gallery css
 */
 
+figure
+{
+  border-bottom: 50px solid transparent;
+}
+
 .caption
 {
     position: absolute;
@@ -147,10 +152,7 @@ div.container {
   width: 100%; 
   height: auto;
 }
-@media screen and (max-width: 400px) {
-  .container.frame { margin: 0; }
-  .container { padding: 0; }
-}
+
 
 .large-display
 {
@@ -624,4 +626,4 @@ display settings
       display:flex;
       flex-direction: column;
   }
-}      
+}
