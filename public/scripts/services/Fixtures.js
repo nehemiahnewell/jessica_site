@@ -8,26 +8,26 @@
         { 
             title: 'Fall Leaf',
             artURL: 'assets/images/FallLeaf.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         },
         { 
             title: 'Autumn Romance',
             artURL: 'assets/images/JessicaYoung_AutumnRomance.jpg',  
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         },
         { 
             title: 'Pink Rose',
             artURL: 'assets/images/PinkRose.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         }
       ]
     };
@@ -38,34 +38,34 @@
         { 
             title: 'Angela',
             artURL: 'assets/images/Angela.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: '',
+            where:"",
+            size: ' ',
+            price: ' '
         },
         { 
             title: 'Hebe',
             artURL: 'assets/images/Hebe.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         },
         { 
             title: 'Ro+Nick', 
-            artURL: 'assets/images/Ro+Nick.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            artURL: 'assets/images/RoNick.jpg', 
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         },
         { 
-            title: '20160918_172853', 
-            artURL: 'assets/images/20160918_172853.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            title: 'Taylor', 
+            artURL: 'assets/images/taylor.jpg', 
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         }
       ]
     };
@@ -74,28 +74,28 @@
       galleryArt: 'assets/images/JessicaYoung_GeorgeVofParis.jpg',
       galleryMembers: [
         { 
-            title: 'George V of Paris.jpg',
+            title: 'George V of Paris',
             artURL: 'assets/images/JessicaYoung_GeorgeVofParis.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         },
         { 
             title: 'Aux Champs Elysees', 
             artURL: 'assets/images/JessicaYoung_AuxChampsElysees.jpg', 
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         },
         { 
             title: "Pont Alexandre", 
             artURL: 'assets/images/PontAlexandre.jpg',  
-            discription: 'This is a discription of a painting. It might tell a small story or have discribe the painting a little. It should be around this long to look right on the page.',
-            where:"Available at some gallery, with an addreess, and a phone number. Alternatively, instructions to contact the artist",
-            size: 'x" H x x" W',
-            price: 'xxx.xx$'
+            discription: ' ',
+            where:" ",
+            size: ' ',
+            price: ' '
         }
       ]
     };
