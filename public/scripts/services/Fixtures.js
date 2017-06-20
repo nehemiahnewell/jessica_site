@@ -3,98 +3,98 @@
   function Fixtures($http, $q) {
     var Fixtures = {};
     var nature = {
-      galleryArt: 'assets/images/FallLeaf.jpg',
+      galleryArt: 'assets/images/FallLeaf_10x11.JPG',
       galleryMembers: [
         { 
             title: 'Fall Leaf',
-            artURL: 'assets/images/FallLeaf.jpg', 
+            artURL: 'assets/images/FallLeaf_10x11.JPG', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '10x11',
             price: ' '
         },
         { 
             title: 'Autumn Romance',
-            artURL: 'assets/images/JessicaYoung_AutumnRomance.jpg',  
+            artURL: 'assets/images/AutumnRomance_16x20.jpg',  
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '16x20',
             price: ' '
         },
         { 
             title: 'Pink Rose',
-            artURL: 'assets/images/PinkRose.jpg', 
+            artURL: 'assets/images/PinkRose_11x15.JPG', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '11x15',
             price: ' '
         }
       ]
     };
  
     var portraits = {
-      galleryArt: 'assets/images/Angela.jpg',
+      galleryArt: 'assets/images/Angela_11x14.JPG',
       galleryMembers: [
         { 
             title: 'Angela',
-            artURL: 'assets/images/Angela.jpg', 
+            artURL: 'assets/images/Angela_11x14.JPG', 
             discription: '',
             where:"",
-            size: ' ',
+            size: '11x14',
             price: ' '
         },
         { 
             title: 'Hebe',
-            artURL: 'assets/images/Hebe.jpg', 
+            artURL: 'assets/images/hebe_11x14.JPG', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '11x14',
             price: ' '
         },
         { 
             title: 'Ro+Nick', 
-            artURL: 'assets/images/RoNick.jpg', 
+            artURL: 'assets/images/Ro+Nick_16x18.JPG', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '16x18',
             price: ' '
         },
         { 
             title: 'Taylor', 
-            artURL: 'assets/images/taylor.jpg', 
+            artURL: 'assets/images/Taylor_11x14.jpg', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '11x14',
             price: ' '
         }
       ]
     };
     
     var cityscapes = {
-      galleryArt: 'assets/images/JessicaYoung_GeorgeVofParis.jpg',
+      galleryArt: 'assets/images/GeorgeVofParis_10x12.jpg',
       galleryMembers: [
         { 
             title: 'George V of Paris',
-            artURL: 'assets/images/JessicaYoung_GeorgeVofParis.jpg', 
+            artURL: 'assets/images/GeorgeVofParis_10x12.jpg', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '10x12',
             price: ' '
         },
         { 
             title: 'Aux Champs Elysees', 
-            artURL: 'assets/images/JessicaYoung_AuxChampsElysees.jpg', 
+            artURL: 'assets/images/AuxChampsElysees_10x13.jpg', 
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '10x13',
             price: ' '
         },
         { 
             title: "Pont Alexandre", 
-            artURL: 'assets/images/PontAlexandre.jpg',  
+            artURL: 'assets/images/PontAlexandre_11x15.JPG',  
             discription: ' ',
             where:" ",
-            size: ' ',
+            size: '11x15',
             price: ' '
         }
       ]
